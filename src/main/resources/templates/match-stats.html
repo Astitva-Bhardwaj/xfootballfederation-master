@@ -1,0 +1,139 @@
+
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: Arial, sans-serif;-->
+<!--            margin: 20px;-->
+<!--        }-->
+
+<!--        h1 {-->
+<!--            text-align: left;-->
+<!--        }-->
+
+<!--        table {-->
+<!--            border-collapse: collapse;-->
+<!--            width: 400px;-->
+<!--        }-->
+
+<!--        th, td {-->
+<!--            border: 1px solid black;-->
+<!--            padding: 10px;-->
+<!--            text-align: center;-->
+<!--        }-->
+
+<!--        th {-->
+<!--            background-color: #f2f2f2;-->
+<!--            font-weight: bold;-->
+<!--        }-->
+
+<!--        td:first-child {-->
+<!--            font-weight: bold;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>Team Stats</h1>-->
+<!--<table>-->
+<!--    <tr>-->
+<!--        <td>Date</td>-->
+<!--        <td colspan="3" th:text="${dateOfMatch}"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td></td>-->
+<!--        <td>Team 1</td>-->
+<!--        <td>Team 2</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Goals</td>-->
+<!--        <td th:text="${team1}"></td>-->
+<!--        <td th:text="${team2}"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Possession</td>-->
+<!--        <td colspan="2" th:text="${goals}"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Total Passes</td>-->
+<!--        <td colspan="2" th:text="${possession}"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Shots</td>-->
+<!--        <td colspan="2" th:text="${totalPasses}"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Shots on target</td>-->
+<!--        <td colspan="2" th:text="${shots}"></td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td>Corners</td>-->
+<!--        <td colspan="2" th:text="${shotsOnTarget}"></td>-->
+<!--    </tr>-->
+<!--</table>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Match Stats</title>
+</head>
+<body>
+<h1>Match Statistics</h1>
+<table>
+    <tr>
+        <th>Match ID</th>
+        <th>Date</th>
+    </tr>
+    <tr>
+<!--        <td>Match ID: <span th:text="${matchId}"></span></td>-->
+        <td th:text="${matchStats.matchId}"></td>
+        <td th:text="${matchStats.date}"></td>
+    </tr>
+</table>
+
+<h2>Team A</h2>
+<table>
+    <tr>
+        <th>Goals</th>
+        <th>Possession</th>
+        <th>Passes</th>
+        <th>Shots</th>
+        <th>Shots on Target</th>
+        <th>Corners</th>
+    </tr>
+    <tr>
+        <td th:text="${matchStats.teamA.goals}"></td>
+        <td th:text="${matchStats.teamA.possession}"></td>
+        <td th:text="${matchStats.teamA.passes}"></td>
+        <td th:text="${matchStats.teamA.shots}"></td>
+        <td th:text="${matchStats.teamA.shotsOnTarget}"></td>
+        <td th:text="${matchStats.teamA.corners}"></td>
+    </tr>
+</table>
+
+<h2>Team B</h2>
+<table>
+    <tr>
+        <th>Goals</th>
+        <th>Possession</th>
+        <th>Passes</th>
+        <th>Shots</th>
+        <th>Shots on Target</th>
+        <th>Corners</th>
+    </tr>
+    <tr>
+        <td th:text="${matchStats.teamB.goals}"></td>
+        <td th:text="${matchStats.teamB.possession}"></td>
+        <td th:text="${matchStats.teamB.passes}"></td>
+        <td th:text="${matchStats.teamB.shots}"></td>
+        <td th:text="${matchStats.teamB.shotsOnTarget}"></td>
+        <td th:text="${matchStats.teamB.corners}"></td>
+    </tr>
+</table>
+</body>
+</html>
+
+
